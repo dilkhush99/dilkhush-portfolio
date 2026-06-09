@@ -1,0 +1,294 @@
+/* ==========================================================================
+   Contact & Footer Component Stylesheet (Prefix: dk-)
+   ========================================================================== */
+
+.dk-contact-footer-wrapper {
+  background-color: #0f172a !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dk-contact-section {
+  color: #f8fafc;
+  width: 100%;
+  height: auto;
+  /* Controlled padding matches the visual vertical weight of prior sections */
+  padding: 3.5rem 0 6rem 0;
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  scroll-margin-top: 80px;
+}
+
+.dk-contact-container {
+  /* MATCHES HERO, ABOUT, JOURNEY & SKILLS MAXIMUM WIDTH RULES EXACTLY */
+  max-width: 1400px;
+  margin: 0 auto;
+  /* MATCHES HERO, ABOUT, JOURNEY & SKILLS SIDE PADDING (8%) EXACTLY */
+  padding: 0 8%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header UI Elements Alignment */
+.dk-section-header {
+  width: 100%;
+  margin-bottom: 3.5rem;
+  text-align: left;
+}
+
+.dk-section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin: 0 0 0.6rem 0;
+  color: #f8fafc;
+}
+
+.dk-gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dk-title-underline {
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  border-radius: 2px;
+}
+
+/* 2-Column Split Workspace Layout Grid */
+.dk-contact-content-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: stretch; /* Forces equal height match balancing map and form track automatically */
+  width: 100%;
+}
+
+/* Left Column Workspace: Map Container */
+.dk-contact-map-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.dk-map-frame {
+  width: 100%;
+  min-height: 380px;
+  border-radius: 16px;
+  padding: 6px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.dk-map-frame iframe {
+  border-radius: 12px;
+  filter: grayscale(30%) invert(90%) hue-rotate(180deg); /* Modern slate tech mapping layers */
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.dk-map-frame:hover iframe {
+  filter: grayscale(0%) invert(0%) hue-rotate(0deg);
+  opacity: 1;
+}
+
+/* Right Column Workspace: Form System */
+.dk-contact-form-wrapper {
+  width: 100%;
+}
+
+.dk-contact-form {
+  width: 100%;
+}
+
+.dk-form-vertical-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.dk-form-row-twin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Form Fields Core Config */
+.dk-form-input,
+.dk-form-textarea {
+  background: rgba(30, 41, 59, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  outline: none;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  color: #f8fafc;
+  font-family: inherit;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dk-form-input::placeholder,
+.dk-form-textarea::placeholder {
+  color: #475569;
+}
+
+.dk-form-input:focus,
+.dk-form-textarea:focus {
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  background: rgba(30, 41, 59, 0.5) !important;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.08);
+}
+
+.dk-form-textarea {
+  resize: vertical;
+}
+
+/* Centered Form Submission Configuration */
+.dk-form-submit-container {
+  display: flex;
+  justify-content: center; /* Securely centers button layout under form elements track */
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.dk-solid-btn-submit {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  color: #ffffff;
+  border: none;
+  padding: 1rem 3.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  width: auto;
+}
+
+.dk-solid-btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.35);
+}
+
+/* ==========================================================================
+   Global Footer Bar Settings
+   ========================================================================== */
+
+.dk-footer-bar {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  width: 100%;
+  padding: 1.75rem 0;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+.dk-footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 8%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dk-copyright-text {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.dk-scroll-top-btn {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+}
+
+.dk-scroll-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.dk-scroll-top-btn:hover {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
+}
+
+.dk-scroll-top-btn:hover .dk-scroll-icon {
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Responsive Map Shifts
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .dk-contact-container {
+    padding: 0 8%;
+  }
+  .dk-contact-content-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .dk-section-header {
+    text-align: center;
+  }
+  .dk-title-underline {
+    margin: 0 auto;
+  }
+  .dk-map-frame {
+    min-height: 320px;
+  }
+  .dk-form-submit-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .dk-contact-container {
+    padding: 0 5%;
+  }
+  .dk-footer-content {
+    padding: 0 5%;
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .dk-form-row-twin {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .dk-solid-btn-submit {
+    width: 100%;
+  }
+}

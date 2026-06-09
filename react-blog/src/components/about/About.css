@@ -1,0 +1,229 @@
+/* ==========================================================================
+   About Section - Tightened Layout & Alignment Blueprint
+   ========================================================================== */
+
+.dk-about-section {
+  background-color: #0f172a !important; 
+  color: #f8fafc;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  /* FIXED: Reduced top padding to 3.5rem to eliminate the giant empty gap */
+  padding: 3.5rem 0 6rem 0; 
+  position: relative;
+  box-sizing: border-box;
+  display: block; 
+  /* Ensures the section snaps perfectly right below the bottom edge of your navbar */
+  scroll-margin-top: 80px; 
+}
+
+.dk-about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 8%;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Strict Area Map Layout Engine */
+  display: grid !important;
+  grid-template-areas: 
+    "dkheader dkheader"
+    "dkleft   dkright";
+  grid-template-columns: 4fr 6fr;
+  gap: 2.5rem 4rem; /* Tightened the row gap between title and columns */
+  align-items: flex-start; 
+}
+
+/* Row 1: Heading Title Block */
+.dk-section-header {
+  grid-area: dkheader !important;
+  width: 100%;
+  display: block;
+  text-align: left;
+  margin: 0;
+}
+
+.dk-section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin: 0 0 0.6rem 0;
+  color: #f8fafc;
+}
+
+.dk-gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dk-title-underline {
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  border-radius: 2px;
+}
+
+/* Row 2 - Left Column: Profile Frame & Button */
+.dk-about-image-column {
+  grid-area: dkleft !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin: 0;
+}
+
+.dk-image-frame {
+  border-radius: 16px;
+  padding: 6px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+              0 0 40px rgba(59, 130, 246, 0.15);
+  max-width: 320px; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dk-about-profile-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Resume Button Container */
+.dk-about-actions {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 320px; 
+  box-sizing: border-box;
+}
+
+.dk-solid-btn-about {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dk-solid-btn-about:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.35);
+}
+
+.dk-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Row 2 - Right Column: Bio Summary */
+.dk-about-text-column {
+  grid-area: dkright !important;
+  width: 100%;
+  margin: 0;
+  padding-top: 4px; 
+}
+
+.dk-about-subtitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 1.2rem 0;
+  letter-spacing: -0.5px;
+}
+
+.dk-about-paragraph {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Metric Stats Grid */
+.dk-about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.dk-stat-card {
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 1.2rem 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dk-stat-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dk-stat-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .dk-about-container {
+    grid-template-areas: 
+      "dkheader"
+      "dkleft"
+      "dkright";
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0 8%; 
+  }
+  .dk-section-header {
+    text-align: center;
+  }
+  .dk-title-underline {
+    margin: 0 auto;
+  }
+  .dk-about-image-column {
+    align-items: center; 
+  }
+}
+
+@media (max-width: 768px) {
+  .dk-about-container {
+    padding: 0 5%; 
+  }
+}
+
+@media (max-width: 580px) {
+  .dk-about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}

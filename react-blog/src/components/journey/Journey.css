@@ -1,0 +1,238 @@
+/* ==========================================================================
+   Journey Section - Exact Matching Blueprint for Hero Alignment
+   ========================================================================== */
+
+.dk-journey-section {
+  background-color: #0f172a !important;
+  color: #f8fafc;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  /* Balanced top padding brought down to 3.5rem to fix gaping spaces */
+  padding: 3.5rem 0 6rem 0;
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  scroll-margin-top: 80px; /* Snaps perfectly below your fixed navbar */
+}
+
+.dk-journey-container {
+  /* MATCHES HERO & ABOUT MAXIMUM WIDTH RULES EXACTLY */
+  max-width: 1400px;
+  margin: 0 auto;
+  /* MATCHES HERO & ABOUT SIDE PADDING (8%) EXACTLY */
+  padding: 0 8%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header Alignment Blueprint */
+.dk-section-header {
+  width: 100%;
+  margin-bottom: 3.5rem; /* Consistent row gap spacing */
+  text-align: left;
+}
+
+.dk-section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin: 0 0 0.6rem 0;
+  color: #f8fafc;
+}
+
+.dk-gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dk-title-underline {
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  border-radius: 2px;
+}
+
+/* Two-Column Workspace Layout Grid */
+.dk-journey-grid {
+  display: grid;
+  /* Uses the 4fr 6fr split or clean 1fr 1fr split. 
+     Let's keep it balanced at 1fr 1fr so Education and Experience track evenly */
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.dk-journey-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Column Subtitle Headers */
+.dk-column-subtitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  letter-spacing: -0.3px;
+}
+
+.dk-column-icon {
+  width: 22px;
+  height: 22px;
+  color: #6366f1;
+}
+
+/* Vertical Timeline Backbone Track */
+.dk-journey-cards-container {
+  position: relative;
+  border-left: 2px solid rgba(255, 255, 255, 0.05);
+  padding-left: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Premium Card Wrapper Box */
+.dk-journey-card {
+  background: rgba(30, 41, 59, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 1.75rem;
+  border-radius: 14px;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Hover Interactions */
+.dk-journey-card:hover {
+  transform: translateY(-3px);
+  background: rgba(30, 41, 59, 0.4);
+  border-color: rgba(99, 102, 241, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+              0 0 40px rgba(59, 130, 246, 0.05);
+}
+
+/* Glowing Timeline Connector Node Dot */
+.dk-card-timeline-node {
+  position: absolute;
+  left: calc(-1.75rem - 7px);
+  top: 2rem;
+  width: 12px;
+  height: 12px;
+  background: #0f172a;
+  border: 2px solid #3b82f6;
+  border-radius: 50%;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+/* Node Dot Glow Effect when card is hovered */
+.dk-journey-card:hover .dk-card-timeline-node {
+  background: #6366f1;
+  border-color: #6366f1;
+  box-shadow: 0 0 12px #6366f1;
+  scale: 1.15;
+}
+
+/* Timeline Inner Metadata Typography */
+.dk-card-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.dk-card-dates {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6366f1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.4rem;
+}
+
+.dk-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+}
+
+.dk-card-subtitle {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Tech Bullet Content Styles */
+.dk-card-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dk-card-bullet-item {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+/* Precision Custom Indigo Bullet Vectors */
+.dk-card-bullet-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #3b82f6;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Responsive Adaptability Layouts
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .dk-journey-container {
+    padding: 0 8%;
+  }
+  .dk-journey-grid {
+    grid-template-columns: 1fr; /* Stacks columns cleanly on tablet/mobile screens */
+    gap: 3.5rem;
+  }
+  .dk-section-header {
+    text-align: center;
+  }
+  .dk-title-underline {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .dk-journey-container {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 580px) {
+  .dk-journey-cards-container {
+    padding-left: 1.25rem;
+  }
+  .dk-card-timeline-node {
+    left: calc(-1.25rem - 7px);
+  }
+}
