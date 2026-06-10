@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
-import heroImg from '../../assets/dk.png';
+import heroImg from '../../assets/dk.png'; // Ensure this image is in your assets folder
 
 const Hero = () => {
   // 1. State to manage which section is currently active
