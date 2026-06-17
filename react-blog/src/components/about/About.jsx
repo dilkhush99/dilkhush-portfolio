@@ -20,7 +20,7 @@ const About = () => {
           </div>
           
           <div className="dk-about-actions">
-            <button className="dk-solid-btn-about" onClick={() => window.open('/resume/dilkhush_kumar_java_developer.pdf', '_blank')}>
+            <button className="dk-solid-btn-about" onClick={() => window.open(`${import.meta.env.BASE_URL}resume/dilkhush_kumar_java_developer.pdf`, '_blank')}>
               View Resume
               <svg className="dk-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
